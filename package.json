@@ -1,5 +1,19 @@
 {
   "dependencies": {
     "cypress": "^13.2.0"
+  },
+  "name": "cypress_practice",
+  "description": " ",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": " "
   }
 }
