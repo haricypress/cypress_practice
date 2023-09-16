@@ -1,0 +1,15 @@
+
+if cypress not work on any browser, follow below :
+
+
+command  : npx cypress open
+
+
+
+Goto File -> View App Data
+Delete everything in here  ( ctrl +A,  press delete button)
+Close cypress, open again
+solved
+
+Note : coding / scripts never effect
+=========================================================================================
