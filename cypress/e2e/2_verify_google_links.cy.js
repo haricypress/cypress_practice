@@ -13,7 +13,6 @@ it.only('verify working and not working links without open, write on file', () =
         cy.get('a').each(($link, index) => {
 
             const href = $link.prop('href')
-
             if (href) {
                 cy.request({ url: href, failOnStatusCode: false}).then((response) => {
                     // failOnStatusCode: false    :  if brocken links are there skip Error
@@ -33,14 +32,12 @@ it.only('verify working and not working links without open, write on file', () =
                     } //else
                 })// cy.request
             } //if(href)
-        }).then(($link) => {
+        }).then(($link) => {  //  cy.get('a').each(($link, index)
             const totalLinks = $link.length
             cy.log(` total links   :  ${totalLinks}`)
             cy.log(`working links    :  ${workingl}`)
             cy.log(`not working links  :  ${brockenl}`)
-
-        })// cy.get('a') 
-
+        }) // .then($link)
     })  //it 
 // =============================================================================================================
 
