@@ -19,14 +19,16 @@ it.only('verify working and not working links without open, write on file', () =
                     // failOnStatusCode: false    :  if brocken links are there skip Error
                     if (response.status < 400) {  // checking status
 
-                        // cy.log(`link :  ${index + 1} is working`)
+                        cy.log(`link :  ${index + 1} is working`)
                         workingl++
+                        // to write working links in file
                         // cy.writeFile('cypress/fixtures/output/working_links.json', href + '\n', { flag: 'a+' })
 
                     } // if(response.status)
                     else {
-                        // cy.log(`link :  ${index + 1} is brocken`)
+                        cy.log(`link :  ${index + 1} is brocken`)
                         brockenl++
+                        // to write brocken links in file
                         // cy.writeFile('cypress/fixtures/output/brocken_links.json', href + '\n', { flag: 'a+' })
                     } //else
                 })// cy.request
