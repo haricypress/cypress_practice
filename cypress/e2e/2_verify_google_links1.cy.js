@@ -2,7 +2,7 @@ describe('Find links on web page', () => {
 
     it('verify active links without open', () => {
         var activel = 0
-        var links = ''
+        
         cy.visit('https://www.google.com/search?q=cypress')
 
         cy.get('a').each(($link, index) => {
