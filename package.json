@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "cypress": "^13.2.0"
+    "@xmldom/xmldom": "^0.8.10",
+    "cypress": "^13.2.0",
+    "xpath": "^0.0.33"
   },
   "name": "cypress_practice",
   "description": " ",
@@ -11,7 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": " "
