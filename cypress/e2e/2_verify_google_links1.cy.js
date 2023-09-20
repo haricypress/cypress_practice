@@ -10,7 +10,7 @@ describe('Find links on web page', () => {
             if (href) {
                 cy.request({ url: href, failOnStatusCode: false }).then((response) => {
                     // failOnStatusCode: false    :  if brocken links are there skip Error
-                    if (response.status >= 400) {  // checking status
+                    if (response.status < 400) {  // checking status
                        
                         cy.log(`link :  ${index + 1} is Active`)
                         activel++
