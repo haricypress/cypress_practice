@@ -17,9 +17,7 @@ describe('Find broken links on the page', () => {
                     } // if(response.status)
                 })// cy.request
             } //if(href)
-            
         })// cy.get('a') 
         cy.log(`total active links :  ${activel}`) 
-        
     })  //it 
 }) //describe
