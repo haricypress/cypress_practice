@@ -40,9 +40,9 @@ describe('Find links on web page', () => {
         // ========================================
         // objLoginPage.usermane_way_3().type("Admin")
         // or
-        // cy.get(objLoginPage.usermane_way_3().type(Cypress.env('username')))
+        // objLoginPage.usermane_way_3().type(Cypress.env('username'))
         // or
-        objLoginPage.usermane_way_3().type(Cypress.env('username'))
+        cy.get(objLoginPage.usermane_way_3().type(Cypress.env('username')))  // cy.get( everyting here )  
 
         // ========================================
 
