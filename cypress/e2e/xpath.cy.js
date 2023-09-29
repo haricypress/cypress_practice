@@ -1,4 +1,4 @@
-import xpathObj_rediff from "./xpath.po"
+import xpathObj_rediff from "../PageObjectModels/xpath.po"
 
 
 describe('rediff', () => {
