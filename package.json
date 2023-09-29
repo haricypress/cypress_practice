@@ -1,8 +1,7 @@
 {
   "dependencies": {
     "@xmldom/xmldom": "^0.8.10",
-    "cypress": "^13.2.0",
-    "xpath": "^0.0.33"
+    "cypress": "^13.2.0"
   },
   "name": "cypress_practice",
   "description": " ",
@@ -16,5 +15,8 @@
   "repository": {
     "type": "git",
     "url": " "
+  },
+  "devDependencies": {
+
   }
 }
