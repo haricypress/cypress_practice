@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.10",
-    "cypress": "^13.2.0"
+    "@xmldom/xmldom": "^0.8.10"
   },
   "name": "cypress_practice",
   "description": " ",
@@ -17,7 +16,8 @@
     "url": " "
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^9.5.1"
+    "cypress": "^13.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
