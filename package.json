@@ -17,6 +17,10 @@
     "url": " "
   },
   "devDependencies": {
-
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
