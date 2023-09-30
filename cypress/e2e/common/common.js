@@ -1,11 +1,11 @@
 import { Given, Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("visit orangehrmlive", () => {
+Given("this is given syntax", () => {
 
-    cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    cy.log('this is common file Given')
 
 })
-Then("orangeHRM verification for successfull", () => {
+// Then("this is Then syntax", () => {
 
-    cy.contains("Username : Admin").should("be.visible")
-})
+//     cy.log('this is common file Then')
+// })

@@ -1,7 +1,7 @@
 
-Feature: orangehrmlive
-  verifying orangehrmlive visit
+Feature: first BDD framework
+  verifying step implementations searching sequence
 
-Scenario: visiting the frontpage
-Given visit orangehrmlive
-Then orangeHRM verification for successfull
+Scenario: verifying .featre file searching for implementation
+Given this is given syntax
+Then this is Then syntax

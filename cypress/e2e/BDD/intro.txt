@@ -1,0 +1,12 @@
+
+
+in BDD,
+all ".feature" files giving priority as below for looking step implementations,
+
+1) common/common.js
+2) ".js" file name as ".feature" file name ( ex :  login.js, login.feature )
+3) with other named "js" file ( ex :  employee.js, login.feature )
+
+in "common" folder, in any ".js" file, if there is no step implementation then Error will raise.
+
+
