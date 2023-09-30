@@ -1,8 +1,8 @@
 
 
 in BDD,
-all ".feature" files looking step implementations, searching files by file names
-in alphabatic order.
+all ".feature" files are searching in ".js" files for step implementations 
+by file names alphabatic order.
 
 if there is no step implementations in any ".js" file then Error will raise.
 
