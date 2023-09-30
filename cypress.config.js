@@ -8,7 +8,9 @@ module.exports = defineConfig({
   },
 
   e2e: {
-    "specPattern": "**/*.{cy.js,feature}",
+
+
+    "specPattern": "**/*.{cy.js,feature,js}",
 
 
     setupNodeEvents(on, config) {
