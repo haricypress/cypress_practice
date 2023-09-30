@@ -1,6 +1,8 @@
 
 
 in BDD,
+
+place "common" folder under "e2e" folder
 all ".feature" files are searching in ".js" files for step implementations 
 by file names alphabatic order.
 
