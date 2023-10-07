@@ -34,10 +34,7 @@ describe('Automation - Working With Tables in webpage', function () {
             cy.get('td').eq(0).should('contain.text', 'HDFC Bank Ltd.')  // company name changing every time based on share value
 
         })
-    })
-
-
-    // ===============================================================================
+    })    // ===============================================================================
 
 
 
@@ -48,7 +45,7 @@ describe('Automation - Working With Tables in webpage', function () {
 
 
     it.only('3. table - Validate value based on another Value', function () {
-        cy.visit('https://testautomationpractice.blogspot.com/')
+        cy.visit('cypress/htmlFiles/table.html')
 
 
         // cy.xpath('//table[@name="BookTable"]/tbody/tr[6]').within(() => {
@@ -61,18 +58,41 @@ describe('Automation - Working With Tables in webpage', function () {
         //     })
         // })
 
-       cy.xpath('//table[@name="BookTable"]').each((rows) => {
+        cy.get('table[name="BookTable"]').each((rows) => {
 
-        cy.wrap(rows).within(() => {
+            cy.get(rows).contains('td', 'Amod').parent().then(elem => {
+                cy.get(elem).within(() => {
 
-            var tr = cy.get('td').contains('Amod')
-            cy.log(tr)
+                    cy.get('td').eq(0).then((ele) => {
 
+                        cy.log(ele.text())
+                    })
 
-        
-     
+                })
+            })
+        })
 
     })// =================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     it('3. table - Validate value based on another Value', function () {
         cy.visit('https://testautomationpractice.blogspot.com/')
