@@ -5,6 +5,9 @@ describe('cypress working with diff websites', () => {
 
 
     it('1. opening two diff websites without origin()', () => {
+
+        // this test get Error
+
         /*
         1st url : https://www.google.com
         2nd url : https://www.cypress.io
@@ -36,7 +39,8 @@ describe('cypress working with diff websites', () => {
             // checking 2nd url and current url are same or not
             cy.url().should("eq", "https://www.cypress.io")
 
-            cy.contains('With Cypress, you can e').should("be.visible")  // checking assertion in 2nd url
+            // checking assertion in 2nd url
+            cy.contains('With Cypress, you can e').should("be.visible")
 
         }) //  origin
     }) // ==================================================================================================
@@ -55,10 +59,11 @@ describe('cypress working with diff websites', () => {
         cy.origin('https://commons.wikimedia.org', () => {
 
             // some URLs redirecting automatically,
-            // checking 2nd url redirected to 3rd url or not
+            // checking 2nd url redirected to 3rd url or not, checking with 3rd url
             cy.url().should("eq", "https://commons.wikimedia.org/wiki/Main_Page")
 
-            cy.get('.mainpage-welcome-sitename').should('contain.text', 'Wikimedia Commons'); // checking assertion in 3rd url
+            // checking assertion in 3rd url
+            cy.get('.mainpage-welcome-sitename').should('contain.text', 'Wikimedia Commons');
 
         })  //  origin
     })// ==========================================================================================    
