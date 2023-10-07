@@ -1,4 +1,9 @@
 describe('cypress working with diff websites', () => {
+
+
+//note : external pugins like "xpath" not work in "origin()"
+
+
     it('1. opening two diff websites without origin()', () => {
         /*
         1st url : https://www.google.com
