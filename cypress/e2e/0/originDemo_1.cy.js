@@ -1,5 +1,9 @@
 describe('cypress working with diff websites', () => {
-    it('1. opening two diff websites without origin', () => {
+    it('1. opening two diff websites without origin()', () => {
+        /*
+        1st url : https://www.google.com
+        2nd url : https://www.cypress.io
+        */
 
         cy.visit('https://www.google.com');
         cy.contains('Google offered').should("be.visible")
@@ -47,8 +51,8 @@ describe('cypress working with diff websites', () => {
             cy.url().should("eq", "https://www.cypress.io")
 
             cy.contains('With Cypress, you can e').should("be.visible")
-
-        })    //  origin
-    })// ==================================================================================================
+            
+        }) //  origin
+    }) // ==================================================================================================
 
 })// describe
