@@ -11,7 +11,7 @@ module.exports = defineConfig({
 
 
     "specPattern": "**/*.{cy.js,feature}",
-
+    // experimentalSessionAndOrigin:true,
 
     setupNodeEvents(on, config) {
 
