@@ -3,8 +3,8 @@ describe('Automation - Working With Tables in webpage', function () {
 
     // beforeEach("open web page", () => {
 
-    //     cy.visit('https://money.rediff.com/indices/bse/sensex?src=moneyhome_bseIndices');
-
+    //     cy.visit('https://money.rediff.com/indices/bse/sensex?src=moneyhome_bseIndices')
+      
     // })// =================================================================================
 
     it('1. table - basic operations', function () {
@@ -39,34 +39,34 @@ describe('Automation - Working With Tables in webpage', function () {
         // cy.visit('cypress/htmlFiles/table.html')
         cy.visit('https://testautomationpractice.blogspot.com/')
 
-        // cy.xpath('//table[@name="BookTable"]/tbody/tr[6]').within(() => {
+            // cy.xpath('//table[@name="BookTable"]/tbody/tr[6]').within(() => {
 
-        //     cy.get('td').eq(0).then((variable_ele) => {
+            //     cy.get('td').eq(0).then((variable_ele) => {
 
-        //         var text = variable_ele.text()
-        //         cy.log(text)
+            //         var text = variable_ele.text()
+            //         cy.log(text)
 
-        //     })
-        // })
-        // ===========================================
+            //     })
+            // })
+            // ===========================================
 
-        cy.xpath('//table[@name="BookTable"]').each((rows) => {
+            cy.xpath('//table[@name="BookTable"]').each((rows) => {
 
-            cy.get(rows).contains('td', 'Amod').parent().then(elem => {
-                cy.get(elem).within(() => {
+                cy.get(rows).contains('td', 'Amod').parent().then(elem => {
+                    cy.get(elem).within(() => {
 
-                    cy.get('td').eq(0).then((ele) => {
+                        cy.get('td').eq(0).then((ele) => {
 
-                        cy.log(ele.text())
-                    })
+                            cy.log(ele.text())
+                        })
+                    
 
                 })
             })
         })
-
     })// =================================================================================
 
-    it('3. table - Validate value based on another Value', function () {
+    it('4. table - Validate value based on another Value', function () {
         cy.visit('https://testautomationpractice.blogspot.com/')
 
         cy.get('.dataTable >tbody').contains('Wipro').parent().parent().within(() => {
@@ -78,7 +78,7 @@ describe('Automation - Working With Tables in webpage', function () {
         })
     })// =================================================================================
 
-    it('4. search data within table', function () {
+    it('5. search data within table', function () {
 
 
         // // Get entire Table Data
@@ -92,8 +92,8 @@ describe('Automation - Working With Tables in webpage', function () {
                 })
             })
     })// =================================================================================
-    
-    it('5. search data within table', function () {
+
+    it('6. search data within table', function () {
 
         // every time, maybe this company not available on top 30
         cy.xpath('//table[@class="dataTable"]/tbody').contains(3215.40).should("be.visible")
