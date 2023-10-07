@@ -1,4 +1,3 @@
-///<reference types="cypress"/>
 
 describe('Automation - Working With Tables in webpage', function () {
 
@@ -34,19 +33,11 @@ describe('Automation - Working With Tables in webpage', function () {
             cy.get('td').eq(0).should('contain.text', 'HDFC Bank Ltd.')  // company name changing every time based on share value
 
         })
-    })    // ===============================================================================
-
-
-
-
-
-
-
-
+    })// ===============================================================================
 
     it.only('3. table - Validate value based on another Value', function () {
-        cy.visit('cypress/htmlFiles/table.html')
-
+        // cy.visit('cypress/htmlFiles/table.html')
+        cy.visit('https://testautomationpractice.blogspot.com/')
 
         // cy.xpath('//table[@name="BookTable"]/tbody/tr[6]').within(() => {
 
@@ -57,8 +48,9 @@ describe('Automation - Working With Tables in webpage', function () {
 
         //     })
         // })
+        // ===========================================
 
-        cy.get('table[name="BookTable"]').each((rows) => {
+        cy.xpath('//table[@name="BookTable"]').each((rows) => {
 
             cy.get(rows).contains('td', 'Amod').parent().then(elem => {
                 cy.get(elem).within(() => {
@@ -73,26 +65,6 @@ describe('Automation - Working With Tables in webpage', function () {
         })
 
     })// =================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     it('3. table - Validate value based on another Value', function () {
         cy.visit('https://testautomationpractice.blogspot.com/')
@@ -118,15 +90,13 @@ describe('Automation - Working With Tables in webpage', function () {
                     // all table data stored in "celldata"
                     cy.log(celldata.text())
                 })
-
-
             })
-
     })// =================================================================================
+    
     it('5. search data within table', function () {
 
-
-        cy.xpath('//table[@class="dataTable"]/tbody').contains(3215.40).should("be.visible")  // every time, maybe this company not available on top 30
+        // every time, maybe this company not available on top 30
+        cy.xpath('//table[@class="dataTable"]/tbody').contains(3215.40).should("be.visible")
         cy.xpath('//table[@class="dataTable"]/thead').contains('Company').should("be.visible")
     })// =================================================================================
 
