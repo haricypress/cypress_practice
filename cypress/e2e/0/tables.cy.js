@@ -40,7 +40,7 @@ describe('Automation - Working With Tables in webpage', function () {
         cy.visit('https://testautomationpractice.blogspot.com/')
 
 
-        // using find - within()
+        // using within()  -  find
         // cy.xpath('//table[@name="BookTable"]/tbody/tr[6]').within(() => {
 
         //     cy.get('td').eq(0).then((variable_ele) => {
@@ -52,7 +52,7 @@ describe('Automation - Working With Tables in webpage', function () {
         // })
         // ===========================================
 
-        // using iterative - each()
+        // using each()  -  iterative
         cy.xpath('//table[@name="BookTable"]').each((rows) => {
 
             cy.get(rows).contains('td', 'Amod').parent().then(elem => {
