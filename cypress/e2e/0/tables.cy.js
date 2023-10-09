@@ -19,15 +19,15 @@ describe('Automation - Working With Tables in webpage', function () {
 
     it('2. table - Get row data and Validate column text', function () {
 
+        // if values are fixed in table we should go this scenario
+
         cy.xpath('//table[@class="dataTable"]/tbody/tr[7]').within(() => {
 
             cy.get('td').eq(3).then((variable_ele) => {
 
-                var text = variable_ele.text()
-                cy.log('variable_ele : ', variable_ele)
-                cy.log('text ', text)
+                cy.log(variable_ele.text())
 
-                expect(text).to.equal("1535.85") // this share value. changing every time
+                expect(variable_ele.text()).to.equal("1534.15") // this share value. changing every time
             })
 
             cy.get('td').eq(0).should('contain.text', 'HDFC Bank Ltd.')  // company name changing every time based on share value
@@ -36,6 +36,10 @@ describe('Automation - Working With Tables in webpage', function () {
     })// ===============================================================================
 
     it.only('3. table - Validate value based on another Value', function () {
+
+        // if values are changing in table dynamically we should go this scenario
+
+
         // cy.visit('cypress/htmlFiles/table.html')
         cy.visit('https://testautomationpractice.blogspot.com/')
 
@@ -53,20 +57,31 @@ describe('Automation - Working With Tables in webpage', function () {
         // ===========================================
 
         // using each()  -  iterative
-        cy.xpath('//table[@name="BookTable"]').each((rows) => {
+        cy.xpath('//table[@name="BookTable"]').each((details) => {
+            // cy.log(details.text())
 
-            cy.get(rows).contains('td', 'Amod').parent().then(elem => {
+
+            cy.get(details).contains('Amod').parent().then(elem => {
                 cy.get(elem).within(() => {
 
                     cy.get('td').eq(0).then((ele) => {
 
                         cy.log(ele.text())
                     })
-
-
                 })
             })
         })
+
+
+
+
+
+
+
+
+
+
+
     })// =================================================================================
 
     it('4. table - Validate value based on another Value', function () {
@@ -81,7 +96,7 @@ describe('Automation - Working With Tables in webpage', function () {
         })
     })// =================================================================================
 
-    it('5. search data within table', function () {
+    it.only('5. search data within table', function () {
 
 
         // // Get entire Table Data
@@ -99,6 +114,7 @@ describe('Automation - Working With Tables in webpage', function () {
     it('6. search data within table', function () {
 
         // every time, maybe this company not available on top 30
+        // checking specific value
         cy.xpath('//table[@class="dataTable"]/tbody').contains(3215.40).should("be.visible")
         cy.xpath('//table[@class="dataTable"]/thead').contains('Company').should("be.visible")
     })// =================================================================================
