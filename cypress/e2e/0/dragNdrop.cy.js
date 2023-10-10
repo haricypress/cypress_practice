@@ -2,55 +2,55 @@
 
 describe('Automation - Working With Drag and Drop', function () {
 
-    it('Cypress Test Case - Understanding Drag and Drop', function () {
+  it('Cypress Test Case - Understanding Drag and Drop', function () {
 
-      Cypress.on("uncaught:exception", () => {
-  
-        return false;
-      });
-      
-  
-      cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
+    Cypress.on("uncaught:exception", () => {
 
-      cy.wait(5000)
+      return false;
+    });
 
 
-      //first Approach - Plugin 
+    cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
 
-      // cy.get('.sourceitem').drag('.targetitem')
-
-      // cy.get('#menu-fried-chicken').drag('#plate-items');
-
-      // cy.get('#menu-hamburger').drag('#plate-items');
+    cy.wait(5000)
 
 
+    //first Approach - Plugin 
 
-       //Second Approach
-       
+    // cy.get('.sourceitem').drag('.targetitem')
+
+    // cy.get('#menu-fried-chicken').drag('#plate-items');
+
+    // cy.get('#menu-hamburger').drag('#plate-items');
+
+
+
+    //Second Approach - biult-in 
+
     const dataTransfer = new DataTransfer();
 
-       
-      cy.get('#menu-hamburger').trigger('dragstart',{
-    
-        dataTransfer
-      })
 
-      cy.get('#plate-items').trigger('drop',{
+    cy.get('#menu-hamburger').trigger('dragstart', {
 
-        dataTransfer
-      })
-      
-      cy.get('#menu-ice-cream').trigger('dragstart',{
-    
-        dataTransfer
-      })
-
-      cy.get('#plate-items').trigger('drop',{
-
-        dataTransfer
-      })
-
-      
+      dataTransfer
     })
 
+    cy.get('#plate-items').trigger('drop', {
+
+      dataTransfer
+    })
+
+    cy.get('#menu-ice-cream').trigger('dragstart', {
+
+      dataTransfer
+    })
+
+    cy.get('#plate-items').trigger('drop', {
+
+      dataTransfer
+    })
+
+
   })
+
+})
