@@ -15,43 +15,22 @@ describe('Automation - Working With Drag and Drop', function () {
 })//==================================================================================
 
   it('1. using bilt-in function', () => {
-
-  
-
+ 
      const dataTransfer = new DataTransfer();
 
-    cy.get('#menu-hamburger').trigger('dragstart', {
+    cy.get('#menu-hamburger').trigger('dragstart', {dataTransfer})
 
-      dataTransfer
-    })
+    cy.get('#plate-items').trigger('drop', { dataTransfer})
 
-    cy.get('#plate-items').trigger('drop', {
 
-      dataTransfer
-    })
+    cy.get('#menu-ice-cream').trigger('dragstart', {dataTransfer})
 
-    cy.get('#menu-ice-cream').trigger('dragstart', {
+    cy.get('#plate-items').trigger('drop', {dataTransfer})
 
-      dataTransfer
-    })
 
-    cy.get('#plate-items').trigger('drop', {
+    cy.get('#menu-fried-chicken').trigger('dragstart', {dataTransfer})
 
-      dataTransfer
-    })
+    cy.get('#plate-items').trigger('drop', {dataTransfer})
+
   })//==================================================================================
-
-  it('2. using external plugin', () => {
-
-    cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
-
-    cy.wait(5000)
-
-    cy.get('.sourceitem').drag('.targetitem')
-
-    cy.get('#menu-fried-chicken').drag('#plate-items');
-
-    cy.get('#menu-hamburger').drag('#plate-items');
-
-  })
 })
