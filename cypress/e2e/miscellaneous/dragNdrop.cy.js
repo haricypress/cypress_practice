@@ -1,34 +1,24 @@
 ///<reference types="cypress"/>
 
 describe('Automation - Working With Drag and Drop', function () {
+  
+  Cypress.on("uncaught:exception", () => {
 
-  it('Cypress Test Case - Understanding Drag and Drop', function () {
+    return false;
+  })
 
-    Cypress.on("uncaught:exception", () => {
-
-      return false;
-    });
-
-
+  beforeEach('visiting web site',() =>{
     cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
 
-    cy.wait(5000)
+    cy.wait(3000)  // for slow internet - waiting 3 sec
 
+})//==================================================================================
 
-    //first Approach - Plugin 
+  it('1. using bilt-in function', () => {
 
-    // cy.get('.sourceitem').drag('.targetitem')
+  
 
-    // cy.get('#menu-fried-chicken').drag('#plate-items');
-
-    // cy.get('#menu-hamburger').drag('#plate-items');
-
-
-
-    //Second Approach - biult-in 
-
-    const dataTransfer = new DataTransfer();
-
+     const dataTransfer = new DataTransfer();
 
     cy.get('#menu-hamburger').trigger('dragstart', {
 
@@ -49,8 +39,19 @@ describe('Automation - Working With Drag and Drop', function () {
 
       dataTransfer
     })
+  })//==================================================================================
 
+  it('2. using external plugin', () => {
+
+    cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
+
+    cy.wait(5000)
+
+    cy.get('.sourceitem').drag('.targetitem')
+
+    cy.get('#menu-fried-chicken').drag('#plate-items');
+
+    cy.get('#menu-hamburger').drag('#plate-items');
 
   })
-
 })
