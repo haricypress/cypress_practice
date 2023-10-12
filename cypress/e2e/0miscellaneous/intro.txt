@@ -1,6 +1,0 @@
-var str1 = '1234"asfasf"1234'
-
-
-replaceAll('"' , ""))  - to replace all
-
-replace('"' , ""))  - to replace single value

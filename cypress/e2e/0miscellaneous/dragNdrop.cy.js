@@ -6,6 +6,7 @@ describe('Automation - Working With Drag and Drop', function () {
 
     return false;
   })
+//==================================================================================
 
   beforeEach('visiting web site',() =>{
     cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
