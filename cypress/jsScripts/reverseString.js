@@ -1,5 +1,10 @@
+var string = "i am an indian"
+console.log("\noriginal string :",string,"\n")
 
-var arr = [1, 2, 3, 4, 5];
+var string = string.split("")
+console.log("split string :",string,"\n")
 
-console.log("original array :",arr)
-console.log("reversed array :",arr.reverse())
+reverseString = string.reverse().join("")
+console.log("reversed string :",reverseString,"\n")
+
+// ==========================================================
