@@ -15,7 +15,7 @@ describe('Automation - Working With Drag and Drop', function () {
 
 })//==================================================================================
 
-  it('1. using bilt-in - dataTransfer object', () => {
+  it('1. using bilt-in         -    dataTransfer object', () => {
  
      const dataTransfer = new DataTransfer();
 

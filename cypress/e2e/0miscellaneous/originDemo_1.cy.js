@@ -40,7 +40,9 @@ describe('cypress working with diff websites', () => {
             // cy.url() getting current url
             // checking 2nd and current URLs are same or not
 
-            cy.url().should("eq", "https://www.cypress.io/") // even single symbol mismatched, Error will raise
+
+           // even single symbol mismatched, Error will raise
+            cy.url().should("eq", "https://www.cypress.io/") 
             // or can assert like below
             cy.url().should("include", "cypress.io")
 
