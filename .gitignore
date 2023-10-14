@@ -3,4 +3,3 @@ cypress/screenshots
 cypress/videos
 node_modules
 package-lock.json
-cypress/htmlFiles/htmlFile_files
