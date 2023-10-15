@@ -8,7 +8,7 @@ describe(' diff ways of cy.viewport() using',
   },
 
   () => {
-    it('1. it is using resolution from test-suite"', () => {
+    it('1. using resolution from test-suite"', () => {
       
       cy.visit('https://example.cypress.io')
 
@@ -30,14 +30,14 @@ describe(' diff ways of cy.viewport() using',
 
     })// it =====================================================================
 
-    it('4. viewport(1000, 400) used', () => {
+    it('4. cy.viewport(1000, 400) used', () => {
       cy.viewport(1000, 400)  // custom resolution / viewport
       cy.visit('https://example.cypress.io')
 
     }) // it  =====================================================================
     it('5. officially not mentioned / wrong device name giving', () => {
 
-      // this test-case got Error
+      // this test-case getting Error
       cy.viewport("samsung-s120") 
       cy.visit('https://example.cypress.io')
 
