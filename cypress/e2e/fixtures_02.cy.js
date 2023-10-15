@@ -9,13 +9,9 @@ describe("loading test data from fixtures", () => {
             cy.xpath('//input[@name="username"]').type(login_details.username)
             cy.xpath('//input[@name="password"]').type(login_details.password)
             cy.xpath('//button[@type="submit"]').click()
-
-            
+   
             cy.contains("Dashboard").should("be.visible")  // assertion
 
-
         })
-
     })
-
 })
