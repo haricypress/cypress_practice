@@ -6,7 +6,7 @@ describe("1. loading test data from fixtures", () => {
     var details;
     beforeEach("loading test data from fixtures", () => {
 
-        cy.fixture("login").then(function (testData) {
+        cy.fixture("testData/login").then(function (testData) {
 
             details = testData
 
