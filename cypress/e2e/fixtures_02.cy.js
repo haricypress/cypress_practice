@@ -1,11 +1,10 @@
 describe("loading test data from fixtures", () => {
 
-    it("test datad load from fixtured folder", () => {
+    it("1. test datad load from fixtured folder", () => {
 
         cy.fixture("testData/login").then((login_details) => {
 
-            
-
+        
             cy.visit("https://opensource-demo.orangehrmlive.com")
 
             cy.xpath('//input[@name="username"]').type(login_details.username)
@@ -17,10 +16,9 @@ describe("loading test data from fixtures", () => {
         })
     })
 
-    it("test datad load from fixtured folder", () => {
+    it("2. test datad load from fixtured folder", () => {
 
         cy.fixture("testData/login").then((login_details) => {
-
 
             cy.visit("https://opensource-demo.orangehrmlive.com")
 
