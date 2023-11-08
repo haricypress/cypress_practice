@@ -4,3 +4,4 @@ cypress/videos
 node_modules
 package-lock.json
 cypress/fixtures/testData/
+!cypress/fixtures/testData/login.json
