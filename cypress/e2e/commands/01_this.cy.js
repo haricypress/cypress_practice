@@ -1,4 +1,4 @@
-//  ) "this" keyword declared within test-suite, but not within sub-block, "before" hook used
+//  "this" keyword declared within test-suite, but not within sub-block, "before" hook used
 
 
 // scenario 1 :  "before" declared as  "arrow" function
