@@ -1,12 +1,11 @@
 //  ) "this" keyword declared within test-suite, but not within sub-block, "before" hook used
 
 
-// scenario 1 :  "before" declared as  "arrow" function
-
+// scenario 2 :  "before" declared with  "function" keyword
 
 describe("TS1", function () {
     this.data = "a"
-    before("before", ()=>{
+    before("before", function ()  {
         cy.log(this.data, typeof(this.data))
         this.data = "before"
         cy.log(this.data)
@@ -16,12 +15,12 @@ describe("TS1", function () {
         this.data = 1
         cy.log(this.data)
     })
+	    this.data = "b"
     it("TC3", function () {
         cy.log(this.data)
         this.data = 3
         cy.log(this.data)
     })
-	    this.data = "b"
 	    it("TC2", () => {
         cy.log(this.data)
         this.data = 2
